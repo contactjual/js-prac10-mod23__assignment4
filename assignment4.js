@@ -1,63 +1,63 @@
 // problem1: help zoo manager 
 
-// input = 10;
-// function calculateMoney(input) {
-//     let ticketPerPrice = 120;
+input = 10;
+function calculateMoney(input) {
+    let ticketPerPrice = 120;
 
-//     let giveDarowan = 500;
+    let giveDarowan = 500;
 
-//     let stuffQuantity = 8;
-//     let perStuffCost = 50;
-//     const totalStuffCost = stuffQuantity * perStuffCost;
+    let stuffQuantity = 8;
+    let perStuffCost = 50;
+    const totalStuffCost = stuffQuantity * perStuffCost;
 
-//     const totalPriceAllTickets = input * ticketPerPrice;
+    const totalPriceAllTickets = input * ticketPerPrice;
 
-//     if (input >= 0) {
-//         const todayMoney = (totalPriceAllTickets) - (totalStuffCost + giveDarowan);
-//         const result = 'Amount money of today: ' + todayMoney + ' taka';
-//         return result;
-//     }
-//     else {
-//         return 'please input the actual quantity of ticket selling number';
-//     }
-// }
-// console.log(calculateMoney(input))
+    if (input >= 0) {
+        const todayMoney = (totalPriceAllTickets) - (totalStuffCost + giveDarowan);
+        const result = 'Amount money of today: ' + todayMoney + ' taka';
+        return result;
+    }
+    else {
+        return 'please input the actual quantity of ticket selling number';
+    }
+}
+console.log(calculateMoney(input))
 
 
 
 
 // Problem-02: Good Name , Bad Name
 
-// input = 'RAFFsdfdfgEfFFOU'
-// function checkName(input) {
+input = 'RAFFsdfdfgEfFFOU'
+function checkName(input) {
 
-//     // console.log(typeof input);
+    // console.log(typeof input);
 
-//     let letters = ['a', 'y', 'i', 'f', 'o', 'u', 'w'];
+    let letters = ['a', 'y', 'i', 'f', 'o', 'u', 'w'];
 
-//     const lastLtrInput = input[input.length - 1].toLowerCase();
-//     // console.log(lastLtrInput)
+    const lastLtrInput = input[input.length - 1].toLowerCase();
+    // console.log(lastLtrInput)
 
-//     if (typeof input === 'string') {
+    if (typeof input === 'string') {
 
-//         for (const key of letters) {
-//             // console.log(key);
+        for (const key of letters) {
+            // console.log(key);
 
-//             if (lastLtrInput === key) {
-//                 return 'Good Name';
-//             }
+            if (lastLtrInput === key) {
+                return 'Good Name';
+            }
 
-//         }
-//     }
+        }
+    }
 
-//     else {
-//         return 'invalid';
-//     }
+    else {
+        return 'invalid';
+    }
 
-//     return 'Bad Name';
-// }
+    return 'Bad Name';
+}
 
-// console.log(checkName(input));
+console.log(checkName(input));
 
 
 
