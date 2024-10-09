@@ -1,63 +1,63 @@
 // problem1: help zoo manager 
 
-input = 10;
-function calculateMoney(input) {
-    let ticketPerPrice = 120;
+// input = 10;
+// function calculateMoney(input) {
+//     let ticketPerPrice = 120;
 
-    let giveDarowan = 500;
+//     let giveDarowan = 500;
 
-    let stuffQuantity = 8;
-    let perStuffCost = 50;
-    const totalStuffCost = stuffQuantity * perStuffCost;
+//     let stuffQuantity = 8;
+//     let perStuffCost = 50;
+//     const totalStuffCost = stuffQuantity * perStuffCost;
 
-    const totalPriceAllTickets = input * ticketPerPrice;
+//     const totalPriceAllTickets = input * ticketPerPrice;
 
-    if (input >= 0) {
-        const todayMoney = (totalPriceAllTickets) - (totalStuffCost + giveDarowan);
-        const result = 'Amount money of today: ' + todayMoney + ' taka';
-        return result;
-    }
-    else {
-        return 'please input the actual quantity of ticket selling number';
-    }
-}
-console.log(calculateMoney(input))
+//     if (input >= 0) {
+//         const todayMoney = (totalPriceAllTickets) - (totalStuffCost + giveDarowan);
+//         const result = 'Amount money of today: ' + todayMoney + ' taka';
+//         return result;
+//     }
+//     else {
+//         return 'please input the actual quantity of ticket selling number';
+//     }
+// }
+// console.log(calculateMoney(input))
 
 
 
 
 // Problem-02: Good Name , Bad Name
 
-input = 'RAFFsdfdfgEfFFOU'
-function checkName(input) {
+// input = 'RAFFsdfdfgEfFFOU'
+// function checkName(input) {
 
-    // console.log(typeof input);
+//     // console.log(typeof input);
 
-    let letters = ['a', 'y', 'i', 'f', 'o', 'u', 'w'];
+//     let letters = ['a', 'y', 'i', 'f', 'o', 'u', 'w'];
 
-    const lastLtrInput = input[input.length - 1].toLowerCase();
-    // console.log(lastLtrInput)
+//     const lastLtrInput = input[input.length - 1].toLowerCase();
+//     // console.log(lastLtrInput)
 
-    if (typeof input === 'string') {
+//     if (typeof input === 'string') {
 
-        for (const key of letters) {
-            // console.log(key);
+//         for (const key of letters) {
+//             // console.log(key);
 
-            if (lastLtrInput === key) {
-                return 'Good Name';
-            }
+//             if (lastLtrInput === key) {
+//                 return 'Good Name';
+//             }
 
-        }
-    }
+//         }
+//     }
 
-    else {
-        return 'invalid';
-    }
+//     else {
+//         return 'invalid';
+//     }
 
-    return 'Bad Name';
-}
+//     return 'Bad Name';
+// }
 
-console.log(checkName(input));
+// console.log(checkName(input));
 
 
 
@@ -67,45 +67,181 @@ console.log(checkName(input));
 
 // Problem 03 : Virus in my Array
 
-// const check = NaN;
-// console.log(typeof check);
+// // const check = NaN;
+// // console.log(typeof check);
 
 
-input = [undefined, 'sdhfkd', 'sdfdi', 1, 12, 0, -1, NaN];
+// input = [undefined, 'sdhfkd', 'sdfdi', 1, 12, 0, -1, NaN];
 
-function deleteInvalids(input) {
+// function deleteInvalids(input) {
 
-    // console.log(Array.isArray(input));
-    if (Array.isArray(input) === true) {
+//     // console.log(Array.isArray(input));
+//     if (Array.isArray(input) === true) {
 
-        let container = [];
-        for (const key of input) {
-            // console.log(key);
+//         let container = [];
+//         for (const key of input) {
+//             // console.log(key);
 
-            if (typeof key === "number") {
-                container.push(key);
+//             if (typeof key === "number") {
+//                 container.push(key);
+//             }
+//         }
+//         return container;
+//     }
+
+//     else {
+//         return 'please input an array';
+//     }
+// }
+// console.log(deleteInvalids(input));
+
+// // let convert = NaN;
+// // let str = String(convert);
+// // console.log(typeof str)
+
+
+
+
+
+
+
+
+
+
+
+// ---------------------allkeysPres------------------
+
+// console.log(JSON.stringify(Object.keys(input))==JSON.stringify([ 'name', 'birthYear', 'siteName' ]));
+// let necessaryKeys = ['name', 'birthYear', 'siteName']
+// let objectKeys = Object.keys(input);
+// for (let i = 0; i <= Object.keys(input).length; i++) 
+// necessaryKeys[i] === objectKeys[i] &&
+
+// ----------------------- --------------------------------
+
+
+
+// Problem 04 : Make A Great Password
+
+// input = { birthYear: 1999, name: "kolimudssdin", siteName: "google" }
+
+// function password(input) {
+
+//     let necessaryKeys = ['name', 'birthYear', 'siteName']
+//     let allkeysPres = true;
+
+//     for (let key in input) {
+//         if (!necessaryKeys.includes(key)) {
+//             allkeysPres = false;
+//             break;
+//         }
+//     }
+
+//     if (allkeysPres && typeof input === 'object' && Object.keys(input).length === 3 && input.birthYear.toString().length === 4) {
+//         // console.log('I am in');
+
+//         let splitSite = input.siteName.split('');
+
+//         let capitFirstLtr = splitSite[0].toUpperCase();
+//         // console.log(capitFirstLtr)
+
+//         const capSiteLtr = capitFirstLtr + splitSite.slice(1).join('')
+//         // console.log(capSiteLtr);
+
+//         let password = capSiteLtr + '#' + input.name + "@" + input.birthYear;
+//         return 'The Great Password is: '+ password;
+//     }
+//     else {
+//         // const result = [];
+//         // const retry = 'invalid';
+//         // result.push(retry);
+//         // return result;
+//         // console.log(typeof retry);
+//         return 'invalid';
+//     }
+// }
+
+// console.log(password(input));
+
+
+
+
+
+
+
+
+
+
+//     for (let key of arr) {
+//         console.log(key);
+//         if (key >= 3000) {
+//             let upThree = key.includes(key>=3000);
+//             // let upThree = key;
+//             let realEarning = upThree - (upThree * 0.2);
+//             return realEarning;
+//         }
+//     }
+
+
+// Problem 05 : Monthly Savings of a Freelancer
+
+function monthlySavings(arr, livingCost) {
+
+    if (Array.isArray(arr) === true && typeof livingCost === "number") {
+
+        sum = 0;
+
+        for (let key of arr) {
+            if (key >= 3000) {
+
+                let newArray = [];
+                for (let i = 0; arr.length > i; i++) {
+                    const value = arr[i]
+                    if (value >= 3000) {
+                        const texAddReturn = value - (value * 0.2);
+                        newArray.push(texAddReturn);
+
+                        for(let key2 of value){
+                            sum+=key2;
+                            var savingsAmount2 = sum - livingCost;
+                        }
+                        return 'Total Savings: ' + savingsAmount2 + ' taka';
+                    }
+                    else if (value < 3000 && 0 < value) {
+                        newArray.push(value)
+                    }
+                    else {
+                        return 'invalid input';
+                    }
+                }
+
             }
-        }
-        return container;
-    }
+            else {
 
+                for (const number of arr) {
+                    sum += number;
+                }
+                var savingsAmount1 = sum - livingCost;
+
+                if (savingsAmount1 <= 0) {
+
+                    return 'earn more';
+
+                }
+
+                else {
+                    return 'Total Savings: ' + savingsAmount1 + ' taka'
+                }
+
+            }
+
+        }
+
+    }
     else {
-        return 'please input an array';
+        return 'invalid input';
     }
 }
-console.log(deleteInvalids(input));
-
-// let convert = NaN;
-// let str = String(convert);
-// console.log(typeof str)
-
-
-
-
-
-
-
-
-
+console.log(monthlySavings([1000, 2000, 2500, 3000, 4000], 754))
 
 
