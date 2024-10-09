@@ -88,24 +88,24 @@ function deleteInvalids(input) {
         for (const key of input) {
 
             if (typeof key === "number") {
-                
+
                 container.push(key);
             }
         }
-        
-        // let filtering = container.filter(value)
-        // function value(container) {
-            
+
+        let filtering = container.filter(value)
+        function value(container) {
+
+            let removedNaN = !isNaN(container);
+            return removedNaN;
+        }
+        console.log(filtering)
+
+
+        // let filtering = container.filter(!isNaN(container))
         //     let removedNaN = !isNaN(container);
-        //     return removedNaN;
-        // }
-        // console.log(filtering)
-        
-        
-        let filtering = container.filter(!isNaN(container))
-        //     let removedNaN = !isNaN(container);
-            // return removedNaN;
-            return filtering;
+        // return removedNaN;
+        // return filtering;
 
     }
 
