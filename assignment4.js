@@ -44,9 +44,10 @@ function checkName(input) {
             // console.log(key);
 
             if (lastLtrInput === key) {
-                return 'Good Name';
-            }
 
+                return 'Good Name';
+
+            }
         }
     }
 
@@ -75,38 +76,20 @@ input = [undefined, 'sdhfkd', 'sdfdi', 1, 12, 0, -1, NaN];
 
 function deleteInvalids(input) {
 
-    // for(let changeInput of input)
-
-    // console.log(Array.isArray(input));
     if (Array.isArray(input) === true) {
-
-        // console.log(input==='NaN');
 
         let container = [];
         let empty = [];
 
         for (const key of input) {
 
-            if (typeof key === "number") {
+            if (typeof key === "number" && !isNaN(key)) {  // "!isNaN(key)" 
 
                 container.push(key);
             }
         }
 
-        let filtering = container.filter(value)
-        function value(container) {
-
-            let removedNaN = !isNaN(container);
-            return removedNaN;
-        }
-        console.log(filtering)
-
-
-        // let filtering = container.filter(!isNaN(container))
-        //     let removedNaN = !isNaN(container);
-        // return removedNaN;
-        // return filtering;
-
+        return container;
     }
 
     else {
