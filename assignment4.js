@@ -21,7 +21,7 @@ function calculateMoney(input) {
         return 'please input the actual quantity of ticket selling number';
     }
 }
-// console.log(calculateMoney(input))
+console.log(calculateMoney(input))
 
 
 
@@ -57,7 +57,7 @@ function checkName(input) {
     return 'Bad Name';
 }
 
-// console.log(checkName(input));
+console.log(checkName(input));
 
 
 
@@ -184,7 +184,7 @@ function password(input) {
     }
 }
 
-// console.log(password(input));
+console.log(password(input));
 
 
 
@@ -273,6 +273,6 @@ function monthlySavings(arr, livingCost) {
         return 'invalid input';
     }
 }
-// console.log(monthlySavings([ 1000 , 2000 , 3000 ] , 5400));
+console.log(monthlySavings([ 1000 , 2000 , 3000 ] , 5400));
 
 
